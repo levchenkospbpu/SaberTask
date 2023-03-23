@@ -68,8 +68,15 @@ namespace SaberTask
                 }
             }
             _list.Count = listOfNodes.Count;
-            _list.Head = listOfNodes[0];
-            _list.Tail = listOfNodes[listOfNodes.Count - 1];
+            if (_list.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                _list.Head = listOfNodes[0];
+                _list.Tail = listOfNodes[listOfNodes.Count - 1];
+            }
         }
 
         public void DeserializeHandler(FileStream fileStream)
