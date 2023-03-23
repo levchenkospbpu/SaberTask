@@ -62,6 +62,10 @@ namespace SaberTask
             {
                 Console.WriteLine("Data corrupted");
             }
+            catch (ObjectDisposedException)
+            {
+                Console.WriteLine("Attempt to serialize to a closed file");
+            }
         }
     }
 }

@@ -97,6 +97,10 @@ namespace SaberTask
             {
                 Console.WriteLine("I/O error occurred");
             }
+            catch (ObjectDisposedException)
+            {
+                Console.WriteLine("Attempt to deserialize from a closed file");
+            }
         }
     }
 }

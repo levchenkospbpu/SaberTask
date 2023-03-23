@@ -31,6 +31,7 @@ namespace SaberTask
 
                 using (FileStream fs = new FileStream(_fileName, FileMode.Open))
                 {
+                    fs.Close();
                     listRand2.Deserialize(fs);
                 }
 
